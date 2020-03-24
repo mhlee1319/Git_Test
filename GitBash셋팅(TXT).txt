@@ -1,0 +1,242 @@
+user@LAPTOP-KQJ2CN24 MINGW64 ~
+$ cd ‪C:\Users\user\Desktop\GitTest
+bash: cd: $'\342\200\252C:UsersuserDesktopGitTest': No such file or directory
+user@LAPTOP-KQJ2CN24 MINGW64 ~
+$ pwd
+/c/Users/user
+user@LAPTOP-KQJ2CN24 MINGW64 ~
+$ cd C:/Users/user/Desktop/GitTest
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest
+$ ls
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest
+$ cd study
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/study
+$ cd ..
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest
+$ dir
+Study
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest
+$ ls
+Study/
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest
+$ cd Study/
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study
+$ ls
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study
+$ git init
+Initialized empty Git repository in C:/Users/user/Desktop/GitTest/Study/.git/
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ ls -al
+total 4
+drwxr-xr-x 1 user 197121 0  3월 20 15:34 ./
+drwxr-xr-x 1 user 197121 0  3월 20 15:34 ../
+drwxr-xr-x 1 user 197121 0  3월 20 15:34 .git/
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git pull https://github.com/iotgim/Study.git
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 591 bytes | 65.00 KiB/s, done.
+From https://github.com/iotgim/Study
+ * branch            HEAD       -> FETCH_HEAD
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ ls
+README.md
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git remote
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git remote -h
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+    -v, --verbose         be verbose; must be placed before a subcommand
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git remote add origin https://github.com/iotgim/Study.git
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git remote -v
+origin  https://github.com/iotgim/Study.git (fetch)
+origin  https://github.com/iotgim/Study.git (push)
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ cat test > test.txt
+cat: test: No such file or directory
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ touch test.txt
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ ls
+README.md  test.txt
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ cat test > test.txt
+cat: test: No such file or directory
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ cat test
+cat: test: No such file or directory
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ vi test.txt
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ ls
+README.md  test.txt
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ cat test.txt
+te
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git add .
+warning: LF will be replaced by CRLF in test.txt.
+The file will have its original line endings in your working directory
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ ls
+README.md  test.txt
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test.txt
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git commit -am "test"
+*** Please tell me who you are.
+Run
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+fatal: unable to auto-detect email address (got 'user@LAPTOP-KQJ2CN24.(none)')
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git push origin master
+Everything up-to-date
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test.txt
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git push origin master
+Everything up-to-date
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test.txt
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git commit -am "test"
+*** Please tell me who you are.
+Run
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+fatal: unable to auto-detect email address (got 'user@LAPTOP-KQJ2CN24.(none)')
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git config --global user.email "you@example.com"
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git config --global user.email "kamishin0787@gmail.com"
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git config --global user.name "iotgim"
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git push origin master
+Everything up-to-date
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git commit -am "test"
+[master 3e55869] test
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 271 bytes | 271.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/iotgim/Study.git
+   e2b7004..3e55869  master -> master
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ commit -h
+bash: commit: command not found
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git commit -h
+usage: git commit [<options>] [--] <pathspec>...
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git add .
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git commit -am "업데이트"
+[master 25169d0] 업데이트
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git push orgin master
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights
+and the repository exists.
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/iotgim/Study.git
+   3e55869..25169d0  master -> master
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
+$ ^C
+user@LAPTOP-KQJ2CN24 MINGW64 ~/Desktop/GitTest/Study (master)
