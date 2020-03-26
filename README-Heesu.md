@@ -178,15 +178,41 @@
 ##### 좌항과 우항을 비교하여 서로 값이 같으면 True, 다르면 False가 된다.
 * =은 대입연산자, ==은 동등연산자 이므로 주의!! 
 
-
     alert(1==1)             // True
     alert(1==3)             // False
     alert("one"=="one")     // True 
     alert("one"=="two")     // False
 
-
 ### 일치 연산자 ===
-##### 좌항과 우항이 '정확'하게 같을 때 True, 다르면 False가 된다. 
+좌항과 우항이 '정확'하게 같을 때 True, 다르면 False가 된다.  
+여기에서 '정확'하게 라는 말은 **"값도 같으면서 값의 자료형까지 같다"** 라는 말을 의미한다.  
+
+    alert(1=='1');           // true  -> 숫자1과 문자1 즉, 자료형은 다르지만 서로 같은수를 표현했기 때문
+    alert(1==='1');          // false -> 같은 수를 표현했더라고 자료형이 다르기 때문 
+
+* 비슷하면 같다고 하는 == 보다는 정확하게 같다고 하는 ===를 사용하는 것을 추천!
+
+### null과 undefined 비교
+"a", "b", "c"가 String 타입 인것 처럼 null과 undefined도 타입이 있는데,  
+null은 null타입 undefined는 undefined타입이다.  
+즉, 각각 자체를 타입으로 한다.  
+  
+- undefined -> 프로그래머가 의도하지 않은 상태의 값이 없다.
+- null ->  프로그래머가 의도적으로 부여한 상태의 값이 없다.
+
+    var a;
+    alert(a); // undefined
+
+    var a = null;
+    alert(a); // null
+
+    alert(undefined == null);   // True -> 프로그래머가 의도했던 의도하지 않았던 비었으므로 True
+    alert(undefined === null);  // False -> 프로그래머의 의도한것과 의도하지 않은 것 까지 비교하므로 False
+
+
+
+동등연산자는 숫자 1을 True로 간주 숫자 1이 아닌수를 False로 간주
+일치연산자는 
 
 ****************
 TMI : 마크다운 문법도 같이 공부했습니다. ㅎㅎㅎㅎ ~~칭찬해주세요~~
