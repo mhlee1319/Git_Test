@@ -46,7 +46,11 @@
     - "Open in Default Browser" 단축키 : Alt + B
     - "Open In Other Browser" 단축키 : Shift + Alt + B
 
-    document.write(1+1);            // 2 
+## 숫자 인식
+
+    document.write(1+1);            // 2  
+
+
     document.write(123 + "11);      // 12311
     document.write("abc");          // abc
     document.write("abc"+"DEF")     //abcDEF
