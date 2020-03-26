@@ -11,6 +11,7 @@
 웹서버를 제어하기 위한 기술로써의 자바스크립트
 
 ##자바스크립트 작성
+
     <!DOCTYPE html>
     <html>
         <head>
@@ -18,6 +19,7 @@
         </head>
         <body>
             <script>
+
                 alert('Hello world');  //자바 스크립트 코드
 
                 document.write(1+1); // 2 
