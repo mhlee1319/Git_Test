@@ -213,8 +213,8 @@ null은 null타입 undefined는 undefined타입이다.
 
 
 
-동등연산자는 숫자 1을 True로 간주, 숫자 1이 아닌수를 False로 간주
-일치연산자는 "True"가 아니면 모든 값 False로 간주
+* 동등연산자는 숫자 1을 True로 간주, 숫자 1이 아닌수를 False로 간주  
+* 일치연산자는 "True"가 아니면 모든 값 False로 간주
 
     alert(true == 1);               //true
     alert(true === 1);              //false
@@ -238,7 +238,7 @@ null은 null타입 undefined는 undefined타입이다.
 ### !==
 ===의 반대이므로 "정확하게 같지않다"를 의미한다.  
   
-  
+
 
 ### >, <, >=, <=
 설명없이 예제를 통하여 확인한다.
