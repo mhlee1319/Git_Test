@@ -20,11 +20,11 @@
             <meta charset="utf-8"/>
         </head>
         <body>
+
             <script>
-
                 alert('Hello world');  //자바 스크립트 코드
-
             </script>
+
         </body>
     </html>
 
@@ -46,15 +46,23 @@
     - "Open in Default Browser" 단축키 : Alt + B
     - "Open In Other Browser" 단축키 : Shift + Alt + B
 
-## 숫자 인식
+## 숫자와 문자
 
-    document.write(1+1);            // 2  
+"와 '가 붙지 않은 숫자는 숫자로 인식한다.
 
+    document.write(1);              // 1  
 
-    document.write(123 + "11);      // 12311
-    document.write("abc");          // abc
-    document.write("abc"+"DEF")     //abcDEF
-    document.write(")
+숫자 연산도 가능하다.
+
+    document.writeln(1+1);          // 2
+    document.writeln(2-1);          // 1
+    document.writeln(4*2);          // 8
+
+단 여기에서는 &는 나머지, /는 몫을 구하는 연산이다.
+
+    document.writeln(15%8);         // 7
+    document.writeln(15/8);         // 1
+
 
 
 ****************
