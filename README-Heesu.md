@@ -19,6 +19,12 @@
     <body>
         <script>
             alert('Hello world');  //자바 스크립트 코드
+
+            document.write(1+1); // 2 
+            document.write(123 + "11); // 12311
+            document.write("abc"); // abc
+            document.write("abc"+"DEF") //abcDEF
+
         </script>
     </body>
 </html>
@@ -36,6 +42,7 @@
 
 "Open in Default Browser" 단축키 : Alt + B
 "Open In Other Browser" 단축키 : Shift + Alt + B
+
 
 
 
