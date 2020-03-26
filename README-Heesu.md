@@ -199,8 +199,8 @@
 null은 null타입 undefined는 undefined타입이다.  
 즉, 각각 자체를 타입으로 한다.  
   
-- undefined -> 프로그래머가 의도하지 않은 상태의 값이 없다.
-- null ->  프로그래머가 의도적으로 부여한 상태의 값이 없다.  
+##### - undefined -> 프로그래머가 의도하지 않은 상태의 값이 없다.
+##### - null ->  프로그래머가 의도적으로 부여한 상태의 값이 없다.  
 
     var a;
     alert(a); // undefined
